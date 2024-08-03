@@ -1,27 +1,34 @@
-# IoT-Weather-Monitoring-System
-This Weather Monitoring System uses ESP32 microcontroller to measure temperature and humidity. The data is shown on an LCD screen and sent to a server for further processing and display on a website. It combines hardware and software to monitor the environment in real-time.
+# Weather Monitoring System
 
-1.	Hardware Integration:
-	•	ESP32: Handles both sensor data collection and data transmission.
-	•	Sensors:
-	•	DHT11: Connects to one of the ESP32’s GPIO pins to measure humidity.
-	•	LM35: Connects to an analog pin on the ESP32 to measure temperature.
-	•	Display:
-	•	OLED or TFT Display: Consider using a display module compatible with the ESP32 to show real-time data.
-	•	GSM Module (if Wi-Fi is unavailable): Connects to ESP32 for data transmission.
-	2.	Software Development:
-	•	ESP32 Programming:
-	•	Use the Arduino IDE or PlatformIO to write code that collects sensor data and displays it on the screen.
-	•	Implement HTTP POST requests to send data to the server.
-	•	Backend Setup:
-	•	Node.js server using Express to receive and store data.
-	•	Database (like MongoDB) to store weather data.
-	•	Frontend Development:
-	•	React application with Tailwind CSS for a responsive design to visualize data.
-	•	Fetch data from the server and display it in a user-friendly format.
-	3.	Data Transmission:
-	•	The ESP32 handles data collection and sends it directly to the server.
-	•	Implement error handling for reliable data transmission.
-	4.	Web Interface:
-	•	Design a clean, responsive interface using React and Tailwind CSS.
-	•	Ensure real-time data updates on the web interface.
+## Overview
+
+The Weather Monitoring System is designed to provide real-time environmental data by integrating various hardware components and a full-stack software setup. The project uses the ESP32 microcontroller, a DHT11 temperature and humidity sensor, and an LCD display for local data visualization. Additionally, it includes an Express server and a React frontend styled with Tailwind CSS for remote data access and presentation.
+
+## Components Used
+
+- **ESP32 Microcontroller**: Central unit for handling data collection from sensors and managing the display.
+- **DHT11 Sensor**: Measures temperature and humidity levels.
+- **LCD Display**: A 16x2 LCD screen that shows real-time temperature and humidity data.
+- **Express Server**: A backend server built with Node.js and Express to handle data reception and storage.
+- **React Frontend**: A web application for displaying the collected weather data, styled with Tailwind CSS for a modern and responsive design.
+
+## Process
+
+1. **Data Collection**: The DHT11 sensor measures temperature and humidity and sends this data to the ESP32.
+2. **Data Display**: The ESP32 processes the sensor data and updates the LCD display to show current readings.
+3. **Data Transmission**: The ESP32 transmits sensor data to an Express server via HTTP POST requests.
+4. **Data Storage**: The Express server receives the data, processes it, and stores it in a database.
+5. **Data Access**: The React frontend fetches data from the Express server through APIs and displays it on a web interface.
+
+## Software Components
+
+- **Express Server**:
+  - Developed using Node.js and Express.
+  - Handles incoming data from the ESP32 and stores it in a database.
+  - Provides APIs for retrieving weather data.
+
+- **React Frontend**:
+  - Developed using React for a dynamic and interactive user interface.
+  - Styled with Tailwind CSS to ensure a responsive and visually appealing design.
+  - Fetches data from the Express server and displays it in a user-friendly format.
+
