@@ -34,18 +34,20 @@ The Weather Monitoring System is designed to provide real-time environmental dat
 
 ## Screenshots
 
-### LCD Display
+### Mobile View
 
-![LCD Display](screenshots/lcd-display.png)
+<img src="Screenshots/1.PNG" alt="LCD Display" width="200"/>
 
-*Real-time temperature and humidity readings displayed on the LCD screen.*
 
 ### Web Interface
 
-![Web Interface](screenshots/web-interface.png)
+<img src="Screenshots/2.png" alt="Web Interface" width="400"/>
 
-*The React frontend displaying weather data collected from the sensors.*
+### Receiving Data to the Server
 
-## License
+<img src="Screenshots/3.png" alt="VS Code" width="400"/>
 
-This project is licensed under the MIT License.
+### Arduino IDE
+
+<img src="Screenshots/4.png" alt="Arduino IDE" width="400"/>
+
