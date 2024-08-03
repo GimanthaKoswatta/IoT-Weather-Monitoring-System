@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Weather Monitoring System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+The Weather Monitoring System is designed to provide real-time environmental data by integrating various hardware components and a full-stack software setup. The project uses the ESP32 microcontroller, a DHT11 temperature and humidity sensor, and an LCD display for local data visualization. Additionally, it includes an Express server and a React frontend styled with Tailwind CSS for remote data access and presentation.
 
-In the project directory, you can run:
+## Components Used
 
-### `npm start`
+- **ESP32 Microcontroller**: Central unit for handling data collection from sensors and managing the display.
+- **DHT11 Sensor**: Measures temperature and humidity levels.
+- **LCD Display**: A 16x2 LCD screen that shows real-time temperature and humidity data.
+- **Express Server**: A backend server built with Node.js and Express to handle data reception and storage.
+- **React Frontend**: A web application for displaying the collected weather data, styled with Tailwind CSS for a modern and responsive design.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Process
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Data Collection**: The DHT11 sensor measures temperature and humidity and sends this data to the ESP32.
+2. **Data Display**: The ESP32 processes the sensor data and updates the LCD display to show current readings.
+3. **Data Transmission**: The ESP32 transmits sensor data to an Express server via HTTP POST requests.
+4. **Data Storage**: The Express server receives the data, processes it, and stores it in a database.
+5. **Data Access**: The React frontend fetches data from the Express server through APIs and displays it on a web interface.
 
-### `npm test`
+## Software Components
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Express Server**:
+  - Developed using Node.js and Express.
+  - Handles incoming data from the ESP32 and stores it in a database.
+  - Provides APIs for retrieving weather data.
 
-### `npm run build`
+- **React Frontend**:
+  - Developed using React for a dynamic and interactive user interface.
+  - Styled with Tailwind CSS to ensure a responsive and visually appealing design.
+  - Fetches data from the Express server and displays it in a user-friendly format.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Screenshots
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### LCD Display
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![LCD Display](screenshots/lcd-display.png)
 
-### `npm run eject`
+*Real-time temperature and humidity readings displayed on the LCD screen.*
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Web Interface
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Web Interface](screenshots/web-interface.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+*The React frontend displaying weather data collected from the sensors.*
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## License
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License.
